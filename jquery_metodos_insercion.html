@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>metodos de jquery</title>
+
+		<style>
+			div {
+				border-style: solid;
+				border-width: 3px;
+				margin-bottom: 20px;
+			}
+
+			p {
+				border-style: solid;
+				border-width: 3px;
+				border-color: blue;
+			}
+
+		</style>
+
+		<script src="javascript/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				
+			$("#caja1").after("<p>Nuevo parrafo");
+			$("#caja1").before("<p>Principio de un Nuevo parrafo");
+			$("#caja1").prepend("<p>este se enceuntra dentro de una caja al prinicpio");
+			$("#caja1").append("<p>se encuentra dentro de una caja despues del parrafo");
+				
+				
+
+			});
+
+		</script>
+	</head>
+	<body>
+		<h2>Ejemplo Jquery</h2>
+
+		<div id="caja1">
+			Esta es la caja 1
+		</div>
+		<div id="caja2">
+			Esta es la caja 2
+		</div>
+
+	</body>
+</html>

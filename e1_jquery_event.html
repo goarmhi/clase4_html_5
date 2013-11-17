@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>jquery</title>
+
+		<style type="text/css">
+			body {
+				text-align: center;
+			}
+			
+			@font-face {
+				font-family: 'marck_script';
+				src: url('../fuentes/marckscript.eot'); /* IE9 Compat Modes */
+				src: url('../fuentes/marckscript.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+				url('../fuentes/marckscript.woff') format('woff'), /* Modern Browsers */
+				url('../fuentes/marckscript.ttf') format('truetype'), /* Safari, Android, iOS */
+				url('../fuentes/marckscript.svg#marck script') format('svg'); /* Legacy iOS */
+			}
+
+			p {
+				border-style: solid;
+				padding: 10px;
+				margin-bottom: 20px;
+			}
+
+			div {
+				border-style: solid;
+				border-color: green;
+				padding: 10px;
+				margin-bottom: 20px;
+			}
+
+			.relleno {
+				background-image: url("imagenes/fondo_cuadros.jpg");
+			}
+
+			.esquinas {
+				/* ------------ ESQUINAS REDONDAS ---------------*/
+				-webkit-border-radius: 10px;
+				-moz-border-radius: 10px;
+				-o-border-radius: 10px;
+				border-radius: 10px;
+			}
+
+			.sombras {
+				/*------------------ SOMBRAS ---------------------*/
+				/*sombras*/
+				-webkit-box-shadow: 0px 0px 5px 3px #333;
+				-moz-box-shadow: 0px 0px 5px 3px #333;
+				-o-box-shadow: 0px 0px 5px 3px #333;
+				box-shadow: 0px 0px 5px 3px #333;
+			}
+
+		</style>
+
+		<script src="javascript/jquery-1.10.2.min.js"></script>
+		<script>
+			//muy importante incluir la siguiente linea:
+			$(function() {			
+
+			});
+		</script>
+	</head>
+	<body>
+
+		<img id="imagen" src="imagenes/imagen1.jpg" class="sombras" />
+
+		<div id="log">
+			log
+		</div>
+
+		<button id="boton">
+			Cambiar texto
+		</button>
+
+	</body>
+</html>

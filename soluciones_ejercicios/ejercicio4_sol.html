@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>jsonp</title>
+
+		<style>			
+
+		</style>
+
+		<script src="../javascript/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript">
+		
+			function muestraFotos(datos) {
+
+				$.each(datos.items, function(iteracion, foto) {
+					var contenedor = $("#contenedor");
+					contenedor.append("<p>");
+					contenedor.append("<h2>Titulo:" + foto.title + "</h2>");
+					contenedor.append("<h2>Autor:" + foto.author + "</h2>");
+					contenedor.append("<h2>Fecha:" + foto.date_taken + "</h2>");
+					contenedor.append("<h2>Link:" + foto.link + "</h2>");
+					contenedor.append("<img src=\"" + foto.media.m + "\" />");
+					contenedor.append("</p>");
+				});
+
+			};
+
+			$(function() {
+				var url = "http://api.flickr.com/services/feeds/photos_public.gne?ids=25053835@N03&format=json&jsoncallback=muestraFotos";
+				$.getScript(url);
+			});
+
+		</script>
+	</head>
+	<body>
+
+		<div id="contenedor">
+
+		</div>
+
+	</body>
+</html>

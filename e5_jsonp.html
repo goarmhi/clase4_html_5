@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>jsonp</title>
+
+		<style>
+			body {
+				background: url(imagenes/fondo_granulado.png);
+			}
+
+		</style>
+
+		<script src="javascript/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript">
+		
+			function miFuncion(datos) {
+
+				$.each(datos.items, function(iteracion, foto) {
+					$("#contenedor").append("<p>" + foto.title + "</p>");
+					$("#contenedor").append("<img src=\"" + foto.media.m + "\" />");
+				});
+
+			};
+
+			$(function() {
+				var url = "http://api.flickr.com/services/feeds/photos_public.gne?ids=61481595@N05&format=json&jsoncallback=miFuncion";
+				$.getScript(url);
+
+			});
+
+		</script>
+	</head>
+	<body>
+
+		<div id="contenedor">
+
+		</div>
+
+	</body>
+</html>
